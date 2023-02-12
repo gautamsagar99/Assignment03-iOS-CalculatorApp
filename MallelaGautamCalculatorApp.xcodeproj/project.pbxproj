@@ -9,17 +9,18 @@
 /* Begin PBXBuildFile section */
 		347DEEF12996F8450029C10F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347DEEF02996F8450029C10F /* AppDelegate.swift */; };
 		347DEEF32996F8450029C10F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347DEEF22996F8450029C10F /* SceneDelegate.swift */; };
-		347DEEF52996F8450029C10F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347DEEF42996F8450029C10F /* ViewController.swift */; };
+		347DEEF52996F8450029C10F /* CalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347DEEF42996F8450029C10F /* CalculatorVC.swift */; };
 		347DEEF82996F8450029C10F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347DEEF62996F8450029C10F /* Main.storyboard */; };
 		347DEEFA2996F8460029C10F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 347DEEF92996F8460029C10F /* Assets.xcassets */; };
 		347DEEFD2996F8460029C10F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347DEEFB2996F8460029C10F /* LaunchScreen.storyboard */; };
+		347DEF07299743ED0029C10F /* MathExpression in Frameworks */ = {isa = PBXBuildFile; productRef = 347DEF06299743ED0029C10F /* MathExpression */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		347DEEED2996F8450029C10F /* MallelaGautamCalculatorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MallelaGautamCalculatorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		347DEEF02996F8450029C10F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		347DEEF22996F8450029C10F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		347DEEF42996F8450029C10F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		347DEEF42996F8450029C10F /* CalculatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVC.swift; sourceTree = "<group>"; };
 		347DEEF72996F8450029C10F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		347DEEF92996F8460029C10F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		347DEEFC2996F8460029C10F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				347DEF07299743ED0029C10F /* MathExpression in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +58,23 @@
 		347DEEEF2996F8450029C10F /* MallelaGautamCalculatorApp */ = {
 			isa = PBXGroup;
 			children = (
-				347DEEF02996F8450029C10F /* AppDelegate.swift */,
-				347DEEF22996F8450029C10F /* SceneDelegate.swift */,
-				347DEEF42996F8450029C10F /* ViewController.swift */,
+				347DEF0429971B480029C10F /* SupportingFiles */,
+				347DEEF42996F8450029C10F /* CalculatorVC.swift */,
 				347DEEF62996F8450029C10F /* Main.storyboard */,
 				347DEEF92996F8460029C10F /* Assets.xcassets */,
 				347DEEFB2996F8460029C10F /* LaunchScreen.storyboard */,
 				347DEEFE2996F8460029C10F /* Info.plist */,
 			);
 			path = MallelaGautamCalculatorApp;
+			sourceTree = "<group>";
+		};
+		347DEF0429971B480029C10F /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				347DEEF22996F8450029C10F /* SceneDelegate.swift */,
+				347DEEF02996F8450029C10F /* AppDelegate.swift */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +93,9 @@
 			dependencies = (
 			);
 			name = MallelaGautamCalculatorApp;
+			packageProductDependencies = (
+				347DEF06299743ED0029C10F /* MathExpression */,
+			);
 			productName = MallelaGautamCalculatorApp;
 			productReference = 347DEEED2996F8450029C10F /* MallelaGautamCalculatorApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +124,9 @@
 				Base,
 			);
 			mainGroup = 347DEEE42996F8440029C10F;
+			packageReferences = (
+				347DEF05299743ED0029C10F /* XCRemoteSwiftPackageReference "MathExpression" */,
+			);
 			productRefGroup = 347DEEEE2996F8450029C10F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				347DEEF52996F8450029C10F /* ViewController.swift in Sources */,
+				347DEEF52996F8450029C10F /* CalculatorVC.swift in Sources */,
 				347DEEF12996F8450029C10F /* AppDelegate.swift in Sources */,
 				347DEEF32996F8450029C10F /* SceneDelegate.swift in Sources */,
 			);
@@ -356,6 +372,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		347DEF05299743ED0029C10F /* XCRemoteSwiftPackageReference "MathExpression" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/peredaniel/MathExpression.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		347DEF06299743ED0029C10F /* MathExpression */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 347DEF05299743ED0029C10F /* XCRemoteSwiftPackageReference "MathExpression" */;
+			productName = MathExpression;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 347DEEE52996F8440029C10F /* Project object */;
 }
