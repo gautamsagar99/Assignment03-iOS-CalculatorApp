@@ -359,11 +359,14 @@ class CalculatorVC: UIViewController {
     
     
     private func factorialValue(fNo: Int) -> Int{
+        if fNo < 15{
         if fNo == 0{
            return 1
         } else {
            return fNo * factorialValue(fNo:fNo-1)
         }
+        }
+        return 0
      }
     
 }
