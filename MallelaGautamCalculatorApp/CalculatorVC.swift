@@ -25,16 +25,11 @@ class CalculatorVC: UIViewController {
             return
         }
 
-//        guard let expression = self.mathExpressionLBL.text else{
-//            return
-//        }
-
         if buttonText == "AC"{
             let value = self.evaluate(exp: buttonText)
             self.mathExpressionLBL.text = self.isInteger(value: value) ? "\(Int(value))" : "\(value)"
             return
         }
-//        self.mathExpressionLBL.text = ""
     }
     
     
