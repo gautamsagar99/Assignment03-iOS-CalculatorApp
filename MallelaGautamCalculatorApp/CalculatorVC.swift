@@ -44,6 +44,29 @@ class CalculatorVC: UIViewController {
     
     
     @IBAction func flipSign(_ sender: UIButton) {
+        guard let buttonTitle = sender.titleLabel, let buttonText = buttonTitle.text else{
+            return
+        }
+
+        guard let expression = self.mathExpressionLBL.text else{
+            return
+        }
+        if buttonText == "+/-"{
+            let value = self.evaluate(exp: expression + "")
+            if Int(value) > 0 {
+                //self.mathExpressionLBL.text = self.isInteger(value: value) ? "\(Int(value))" : "\(value)"
+                self.mathExpressionLBL.text = self.isInteger(value: value) ? "-\(Int(value))" : "-\(value)"
+//                self.mathExpressionLBL.text! = "-\(value)"
+                return
+            }
+            else{
+                self.mathExpressionLBL.text = self.isInteger(value: value) ? "\(Int(abs(value)))" : "\(abs(value))"
+//                self.mathExpressionLBL.text! = "\(abs(value))"
+                return
+            }
+            
+        }
+        
         
     }
     
@@ -178,13 +201,11 @@ class CalculatorVC: UIViewController {
         if buttonText == "sin"{
             let value = self.evaluate(exp: expression + "")
             
-                if value > 0{
+                
                     let output = sin(Double(value))
                     self.mathExpressionLBL.text = "\(output)"
                     return
-                }else{
-                    self.mathExpressionLBL.text = "0"
-                }
+               
             
         }
 
@@ -203,13 +224,11 @@ class CalculatorVC: UIViewController {
         if buttonText == "cos"{
             let value = self.evaluate(exp: expression + "")
             
-                if value > 0{
+                
                     let output = cos(Double(value))
                     self.mathExpressionLBL.text = "\(output)"
                     return
-                }else{
-                    self.mathExpressionLBL.text = "0"
-                }
+                
             
         }
     }
@@ -226,13 +245,11 @@ class CalculatorVC: UIViewController {
         if buttonText == "tan"{
             let value = self.evaluate(exp: expression + "")
             
-                if value > 0{
+                
                     let output = tan(Double(value))
                     self.mathExpressionLBL.text = "\(output)"
                     return
-                }else{
-                    self.mathExpressionLBL.text = "0"
-                }
+               
             
         }
     }
