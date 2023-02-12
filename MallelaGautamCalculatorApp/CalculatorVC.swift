@@ -34,10 +34,7 @@ class CalculatorVC: UIViewController {
     
     
     @IBAction func backspace(_ sender: UIButton) {
-        
-//        guard let expression = self.mathExpressionLBL.text else{
-//            return
-//        }
+
         
         self.mathExpressionLBL.text!.remove(at: self.mathExpressionLBL.text!.index(before: self.mathExpressionLBL.text!.endIndex))
 //        self.mathExpressionLBL.text = "0"
