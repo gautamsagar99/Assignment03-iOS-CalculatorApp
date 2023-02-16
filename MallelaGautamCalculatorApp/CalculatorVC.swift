@@ -35,9 +35,13 @@ class CalculatorVC: UIViewController {
     
     @IBAction func backspace(_ sender: UIButton) {
 
-        
+        guard let expression = self.mathExpressionLBL.text else{
+                    return
+                }
+        if expression != ""{
         self.mathExpressionLBL.text!.remove(at: self.mathExpressionLBL.text!.index(before: self.mathExpressionLBL.text!.endIndex))
 //        self.mathExpressionLBL.text = "0"
+        }
         
     }
     
@@ -84,7 +88,7 @@ class CalculatorVC: UIViewController {
         if buttonText == "%"{
             let value = self.evaluate(exp: expression + "")
             self.mathExpressionLBL.text = self.isInteger(value: value) ? "\(Int(value))" : "\(value)"
-            self.mathExpressionLBL.text! = "\(value/100.0)*"
+            self.mathExpressionLBL.text! = "\(value/100.0)"
             return
         }
     }
@@ -170,18 +174,18 @@ class CalculatorVC: UIViewController {
         if buttonText == "10ˣ"{
             let value = self.evaluate(exp: expression + "")
             if isInteger(value: value){
-                if value > 0{
+//                if value > 0{
                     let output = pow(10.0, Double(value))
-                    self.mathExpressionLBL.text = "\(Int(output))"
+                    self.mathExpressionLBL.text = "\(Double(output))"
                     return
                 }else{
                     self.mathExpressionLBL.text = "0"
                 }
                 
-            }
-            else{
-                self.mathExpressionLBL.text = "0"
-            }
+//            }
+//            else{
+//                self.mathExpressionLBL.text = "0"
+//            }
             
         }
 
